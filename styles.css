@@ -1,0 +1,316 @@
+body{
+    margin: 0;
+    background-color: #0a1931;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: #ffffff; /* Ensures text is readable */
+}
+
+main {
+    background: linear-gradient(to bottom right, #0a1931, #1e3c72);
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns */
+    grid-template-rows: auto auto auto; /* Three rows */
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+h2, h3, h4, h6, p{
+    font-family: 'Poppins', sans-serif;
+    color: #D0F0FF;
+}
+
+nav {
+    grid-column: 1 / -1;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between; /* Space between title and icons */
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 2rem;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+    color: #D0F0FF;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 3rem; /* Space between icons */
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    display: flex;
+    align-items: center;
+}
+
+i{
+    font-size: 3rem; /* Icon size */
+    color: #D0F0FF;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+i:hover{
+    color: #F25F4C; /* Highlight color on hover */
+    transform: scale(1.2); /* Slight zoom effect */
+}
+
+h3, h2{
+    padding-bottom: 0.75rem;
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+#intro {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    grid-column: 1 / -1;
+}
+
+#intro-title{
+    position: relative;
+    display: inline-block;
+    padding: 1.25rem;
+    z-index: 1;
+}
+
+#intro-title::before {
+    content: "";
+    position: absolute;
+    top: 1.25rem;  /* Moves the background down */
+    left: 1.875rem; /* Moves the background to the right */
+    width: 80%;
+    height: 2.5em;
+    background: #F25F4C;
+    border-radius: 50%;
+    transform: rotate(-15deg);
+    z-index: -1; /* Places it behind the text */
+}
+
+#intro-txt {
+    grid-column: 1 / 2; /* First column */
+    padding: 2rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#description{
+    font-size: 0.9rem;
+    line-height: 2;
+    padding: 1rem;
+    font-weight: 400;
+    background-color: rgba(242, 95, 76, 0.5);
+    border-radius: 1rem;
+    text-align: left;
+}
+
+#intro-img {
+    display: flex;
+    align-items: center; /* Vertically centers the image */
+    justify-content: center; /* Horizontally centers the image */
+}
+
+#intro-img img {
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 5px solid #D0F0FF;
+    filter: grayscale(25%);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#intro-img img:hover {
+    box-shadow: 0 0 15px rgba(208, 240, 255, 0.8);
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+    filter: grayscale(0%);
+}
+
+#projects {
+    grid-column: 1 / -1; /* Span across all columns */
+    padding: 2rem;
+}
+
+#project-title {
+    position: relative;
+    display: inline-block;
+    padding: 1.25rem;
+    z-index: 1;
+}
+
+#project-title::before {
+    content: "";
+    position: absolute;
+    top: 1.875rem; 
+    width: 85%;
+    height: 5.5rem;
+    background: #F25F4C;
+    border-radius: 50%;
+    transform: rotate(12deg);
+    z-index: -1;
+}
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card {
+    background-color: #1e3c72;
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 100%; /* let grid handle the width */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* #card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    gap: 1.25rem; 
+    padding: 2rem;
+}
+
+.card{
+    background-color: #1e3c72;
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 90%;
+    max-width: 30rem;
+    min-width: 15rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-title{
+    margin: 1rem;
+    margin-left: 0;
+    font-size: 1.75rem;
+}
+
+.card-img {
+    width: 100%;  
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+.card-p{
+    margin-bottom: 2rem;
+    color: #D0F0FF;
+    background-color: rgba(10, 25, 49, 0.5);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button{
+    color: #ffffff;
+    background-color: #F25F4C;
+    border: 1px solid #F25F4C;
+    border-radius: 20px;
+    width: 60%;
+    box-shadow: none;
+    padding: 0.75rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    background-image: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+button:hover{
+    background-color: #FF7043;
+    border-color: #FF7043;
+    transform: translateY(-3px); /* Subtle hover effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:active{
+    background-color: #D43F2A;
+    border-color: #D43F2A;
+    box-shadow: none;
+    transform: translateY(1px); /* Make it feel pressed */
+}
+
+hr {
+    width: 100%;              /* Make the <hr> take up the full width of its container */
+    margin: 1.5rem 0;         /* Add vertical spacing (top and bottom) around the <hr> */
+    border: none;             /* Remove the default border style */
+    border-top: 1px solid #ffffff; /* Add a custom border color for the <hr> */
+    opacity: 0.5;             /* Optional: Adjust opacity for a subtler look */
+}
+
+
+/* Small screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+        letter-spacing: 0.5rem;
+    }
+}
+
+@media (max-width: 599px) {
+    #intro {
+        grid-template-columns: 1fr; /* Stacks intro sections vertically */
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+/* Medium screens (Tablets) */
+@media (min-width: 600px) {
+    .card {
+        width: 45%; /* Two cards per row */
+    }
+}
+
+/* Large screens (Laptops & Desktops) */
+@media (min-width: 900px) {
+    .card {
+        width: 30%; /* Three cards per row */
+    }
+}
+
+/* Extra-large screens */
+@media (min-width: 1200px) {
+    .card {
+        width: 20%; /* Four cards per row */
+    }
+}
